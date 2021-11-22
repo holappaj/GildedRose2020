@@ -34,7 +34,7 @@ public class GildedRose {
         {
             if ((!"Aged Brie".equals(items.get(i).getName())) && !"Backstage passes to a TAFKAL80ETC concert".equals(items.get(i).getName())) 
             {
-                if (items.get(i).getQuality() > 0)
+                if (items.get(i).getQuality() > 0) 
                 {
                     if (!"Sulfuras, Hand of Ragnaros".equals(items.get(i).getName()))
                     {
@@ -104,4 +104,22 @@ public class GildedRose {
         }
     }
 
+    //constructor
+    public GildedRose() {
+    	items = new ArrayList<Item>();
+    }
+    
+    //getter
+    public List<Item> getItems() {
+    	return items;
+    }
+    //setter
+    public void setItem(Item item) {
+    	items.add(item);
+    }
+    
+    //update one day
+    public void oneDay() {
+    	updateQuality();
+    }
 }
